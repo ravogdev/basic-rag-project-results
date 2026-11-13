@@ -1,0 +1,6 @@
+digest: 979c07a7cb5ccc6ca009792241fa1250b980
+name: beir/fiqa
+profile: null
+schema: null
+source: https://huggingface.co/datasets/BeIR/fiqa
+source_type: hugging_face

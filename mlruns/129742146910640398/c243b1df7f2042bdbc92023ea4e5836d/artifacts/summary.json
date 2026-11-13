@@ -1,0 +1,106 @@
+{
+  "run_id": "0b6527a2-b461-492c-a5e5-43eb3efe9c92",
+  "name": "nfcorpus-minilm-1000+ce-msmarco-minilm-top50",
+  "experiment": "beir-nfcorpus",
+  "dataset": "beir/nfcorpus",
+  "dataset_revision": "b5026a0e96e8a7ac4f95f482a596389289d46269",
+  "status": "COMPLETED",
+  "started_at": "2026-11-13T09:42:30.710884224Z",
+  "finished_at": "2026-11-13T09:50:36.636163451Z",
+  "config": {
+    "name": "beir-nfcorpus",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 50,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "cross-encoder",
+      "model": "ms-marco-minilm-l6",
+      "topN": 100
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-nfcorpus"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "queries": "323",
+    "namespace": "beir-nfcorpus",
+    "git_sha": "d270df2",
+    "baseline_run_id": "db877dc9-713d-4fbc-8a6e-16e3b18c87e6",
+    "baseline_name": "nfcorpus-minilm-1000+ce-msmarco-minilm-top100"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.46594427244582043,
+    "ndcg_at_3": 0.4131609444657133,
+    "ndcg_at_5": 0.3836219590791763,
+    "ndcg_at_10": 0.3469158747373458,
+    "ndcg_at_20": 0.3202059375047716,
+    "ndcg_at_100": 0.25774870151177187,
+    "ndcg_at_1000": 0.2503983368112685,
+    "map_at_1": 0.06212489290990655,
+    "map_at_3": 0.09961512636488805,
+    "map_at_5": 0.11230342872673824,
+    "map_at_10": 0.1297673099799106,
+    "map_at_20": 0.1426650598465784,
+    "map_at_100": 0.14522833263630766,
+    "map_at_1000": 0.14522833263630766,
+    "recall_at_1": 0.06212489290990655,
+    "recall_at_3": 0.10699253875644862,
+    "recall_at_5": 0.12871946375209198,
+    "recall_at_10": 0.15878386122601879,
+    "recall_at_20": 0.19482332452269563,
+    "recall_at_100": 0.21058365222245243,
+    "recall_at_1000": 0.21058365222245243,
+    "precision_at_1": 0.47368421052631576,
+    "precision_at_3": 0.37977296181630543,
+    "precision_at_5": 0.3219814241486068,
+    "precision_at_10": 0.2520123839009288,
+    "precision_at_20": 0.18374613003095977,
+    "precision_at_100": 0.040123839009287926,
+    "precision_at_1000": 0.004012383900928793,
+    "mrr_at_1": 0.47368421052631576,
+    "mrr_at_3": 0.5345717234262125,
+    "mrr_at_5": 0.5444788441692466,
+    "mrr_at_10": 0.5497137451471816,
+    "mrr_at_20": 0.5531391320591831,
+    "mrr_at_100": 0.5539126585575948,
+    "mrr_at_1000": 0.5539126585575948,
+    "main_score": 0.3469158747373458,
+    "latency_ms_mean": 1493.6284829721362,
+    "latency_ms_p95": 1944.0,
+    "index_seconds": 1.456689206000192,
+    "index_documents_new": 0.0,
+    "index_documents_existing": 3633.0,
+    "index_documents_empty_skipped": 0.0,
+    "index_chunks_new": 0.0,
+    "delta_ndcg_at_10": -0.0017415292950269249,
+    "p_value_ndcg_at_10": 0.6266373362663734
+  },
+  "significance": {
+    "metric": "ndcg_at_10",
+    "baseline_run_id": "db877dc9-713d-4fbc-8a6e-16e3b18c87e6",
+    "baseline_name": "nfcorpus-minilm-1000+ce-msmarco-minilm-top100",
+    "delta": -0.0017415292950269249,
+    "p_value": 0.6266373362663734,
+    "test": "paired-randomization",
+    "trials": 10000
+  }
+}

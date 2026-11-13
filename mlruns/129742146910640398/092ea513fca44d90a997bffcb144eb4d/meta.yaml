@@ -1,0 +1,14 @@
+artifact_uri: file:///home/user/basic-rag-project-results/mlruns/129742146910640398/092ea513fca44d90a997bffcb144eb4d/artifacts
+end_time: 1794561632265
+entry_point_name: ''
+experiment_id: '129742146910640398'
+lifecycle_stage: active
+run_id: 092ea513fca44d90a997bffcb144eb4d
+run_name: nfcorpus-minilm-recursive-1000
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794561140970
+status: 3
+tags: []
+user_id: unknown

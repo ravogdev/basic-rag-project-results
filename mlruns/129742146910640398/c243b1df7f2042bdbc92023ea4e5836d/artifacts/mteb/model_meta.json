@@ -1,0 +1,29 @@
+{
+  "name": "nfcorpus-minilm-1000+ce-msmarco-minilm-top50",
+  "revision": "d270df2",
+  "framework": [
+    "basic-rag-project",
+    "rag-eval 0.1.0"
+  ],
+  "embedding": {
+    "provider": "ollama",
+    "model": "all-minilm"
+  },
+  "pipeline": {
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "retrieval": {
+      "topK": 50,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "cross-encoder",
+      "model": "ms-marco-minilm-l6",
+      "topN": 100
+    }
+  },
+  "aggregation": "maxp"
+}

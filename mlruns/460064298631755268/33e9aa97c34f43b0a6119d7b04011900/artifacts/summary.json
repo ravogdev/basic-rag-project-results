@@ -1,0 +1,94 @@
+{
+  "run_id": "c134f77a-da6b-420b-87fa-eeaa4518b83e",
+  "name": "minilm-recursive-1000",
+  "experiment": "beir-scifact",
+  "dataset": "beir/scifact",
+  "dataset_revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+  "status": "COMPLETED",
+  "started_at": "2026-11-13T07:52:12.674988166Z",
+  "finished_at": "2026-11-13T08:04:02.285665494Z",
+  "config": {
+    "name": "beir-scifact",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "none",
+      "model": "",
+      "topN": 100
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-scifact"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "queries": "300",
+    "namespace": "beir-scifact",
+    "git_sha": "d270df2"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.55,
+    "ndcg_at_3": 0.6290149957060752,
+    "ndcg_at_5": 0.6541768629982144,
+    "ndcg_at_10": 0.6852629089735004,
+    "ndcg_at_20": 0.6925848207507487,
+    "ndcg_at_100": 0.7035977959473572,
+    "ndcg_at_1000": 0.7035977959473572,
+    "map_at_1": 0.5273333333333333,
+    "map_at_3": 0.6032777777777777,
+    "map_at_5": 0.6189333333333333,
+    "map_at_10": 0.6335907407407407,
+    "map_at_20": 0.635740570443202,
+    "map_at_100": 0.6377063793699296,
+    "map_at_1000": 0.6377063793699296,
+    "recall_at_1": 0.5273333333333333,
+    "recall_at_3": 0.6822777777777778,
+    "recall_at_5": 0.745,
+    "recall_at_10": 0.835,
+    "recall_at_20": 0.8629999999999999,
+    "recall_at_100": 0.916,
+    "recall_at_1000": 0.916,
+    "precision_at_1": 0.55,
+    "precision_at_3": 0.24555555555555553,
+    "precision_at_5": 0.164,
+    "precision_at_10": 0.09400000000000001,
+    "precision_at_20": 0.04866666666666667,
+    "precision_at_100": 0.010366666666666666,
+    "precision_at_1000": 0.0010366666666666666,
+    "mrr_at_1": 0.55,
+    "mrr_at_3": 0.6177777777777778,
+    "mrr_at_5": 0.6311111111111112,
+    "mrr_at_10": 0.6423941798941799,
+    "mrr_at_20": 0.6442720797720798,
+    "mrr_at_100": 0.6460083011567198,
+    "mrr_at_1000": 0.6460083011567198,
+    "main_score": 0.6852629089735004,
+    "latency_ms_mean": 55.83,
+    "latency_ms_p95": 96.0,
+    "index_seconds": 689.1410874689999,
+    "index_documents_new": 5183.0,
+    "index_documents_existing": 0.0,
+    "index_documents_empty_skipped": 0.0,
+    "index_chunks_new": 19620.0
+  },
+  "significance": null
+}

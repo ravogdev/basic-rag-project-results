@@ -1,0 +1,1 @@
+{"date": "2026-11-13T15:06:07Z", "run_number": null, "commit": "d270df2", "ref": "claude/project-thread-pfk6f5", "config": "configs/{scifact,nfcorpus,fiqa}-candidates.yaml", "max_queries": "", "source": "local run on a 4-core cloud VM (rnd profile), published with rag-eval mlflow-sync", "mlflow_runs": [], "run_url": "https://github.com/ravogdev/basic-rag-project/pull/42"}

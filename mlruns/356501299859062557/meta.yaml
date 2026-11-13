@@ -1,0 +1,9 @@
+artifact_location: file:///home/user/basic-rag-project-results/mlruns/356501299859062557
+creation_time: 1794582337868
+effective_trace_archival_retention: null
+experiment_id: '356501299859062557'
+last_update_time: 1794582337868
+lifecycle_stage: active
+name: rnd/beir-fiqa
+trace_location: null
+workspace: default

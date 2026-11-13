@@ -1,0 +1,106 @@
+{
+  "run_id": "528cca2e-c0cf-4d75-b52c-4afc24f9114a",
+  "name": "fiqa-minilm-1000+ce-msmarco-minilm-top100",
+  "experiment": "beir-fiqa",
+  "dataset": "beir/fiqa",
+  "dataset_revision": "979c07a7cb5ccc6ca009792241fa1250b98055dd",
+  "status": "COMPLETED",
+  "started_at": "2026-11-13T14:33:20.636192905Z",
+  "finished_at": "2026-11-13T14:57:03.333351608Z",
+  "config": {
+    "name": "beir-fiqa",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "cross-encoder",
+      "model": "ms-marco-minilm-l6",
+      "topN": 100
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-fiqa"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "queries": "648",
+    "namespace": "beir-fiqa",
+    "git_sha": "cd3f758",
+    "baseline_run_id": "cbecd9b3-e734-486d-bfca-d06b0b78e377",
+    "baseline_name": "fiqa-minilm-recursive-1000"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.3487654320987654,
+    "ndcg_at_3": 0.33368030575313146,
+    "ndcg_at_5": 0.34815584785759773,
+    "ndcg_at_10": 0.37557081443680584,
+    "ndcg_at_20": 0.3990825172741861,
+    "ndcg_at_100": 0.44013334996545755,
+    "ndcg_at_1000": 0.44013334996545755,
+    "map_at_1": 0.17934982541464023,
+    "map_at_3": 0.25544232145312395,
+    "map_at_5": 0.279943268465645,
+    "map_at_10": 0.2988647830966228,
+    "map_at_20": 0.30756755143263065,
+    "map_at_100": 0.3158602708346432,
+    "map_at_1000": 0.3158602708346432,
+    "recall_at_1": 0.17934982541464023,
+    "recall_at_3": 0.3054857222681297,
+    "recall_at_5": 0.3680494274244274,
+    "recall_at_10": 0.45100545459341757,
+    "recall_at_20": 0.5228069298671151,
+    "recall_at_100": 0.6893284399071435,
+    "recall_at_1000": 0.6893284399071435,
+    "precision_at_1": 0.3487654320987654,
+    "precision_at_3": 0.22376543209876543,
+    "precision_at_5": 0.16728395061728396,
+    "precision_at_10": 0.10601851851851853,
+    "precision_at_20": 0.06334876543209877,
+    "precision_at_100": 0.017237654320987655,
+    "precision_at_1000": 0.0017237654320987653,
+    "mrr_at_1": 0.3487654320987654,
+    "mrr_at_3": 0.41898148148148145,
+    "mrr_at_5": 0.4331018518518518,
+    "mrr_at_10": 0.44413641485400746,
+    "mrr_at_20": 0.44968121235500264,
+    "mrr_at_100": 0.4531419365226522,
+    "mrr_at_1000": 0.4531419365226522,
+    "main_score": 0.37557081443680584,
+    "latency_ms_mean": 2163.4444444444443,
+    "latency_ms_p95": 2502.0,
+    "index_seconds": 16.50638921200016,
+    "index_documents_new": 0.0,
+    "index_documents_existing": 57600.0,
+    "index_documents_empty_skipped": 38.0,
+    "index_chunks_new": 0.0,
+    "delta_ndcg_at_10": -0.0011270096254839509,
+    "p_value_ndcg_at_10": 0.9081091890810918
+  },
+  "significance": {
+    "metric": "ndcg_at_10",
+    "baseline_run_id": "cbecd9b3-e734-486d-bfca-d06b0b78e377",
+    "baseline_name": "fiqa-minilm-recursive-1000",
+    "delta": -0.0011270096254839509,
+    "p_value": 0.9081091890810918,
+    "test": "paired-randomization",
+    "trials": 10000
+  }
+}

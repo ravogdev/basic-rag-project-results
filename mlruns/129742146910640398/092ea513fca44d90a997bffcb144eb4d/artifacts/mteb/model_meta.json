@@ -1,0 +1,29 @@
+{
+  "name": "nfcorpus-minilm-recursive-1000",
+  "revision": "d270df2",
+  "framework": [
+    "basic-rag-project",
+    "rag-eval 0.1.0"
+  ],
+  "embedding": {
+    "provider": "ollama",
+    "model": "all-minilm"
+  },
+  "pipeline": {
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "none",
+      "model": "",
+      "topN": 100
+    }
+  },
+  "aggregation": "maxp"
+}

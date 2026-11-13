@@ -1,0 +1,6 @@
+digest: b3b5335604bf5ee3c4447671af975ea25143
+name: beir/scifact
+profile: null
+schema: null
+source: https://huggingface.co/datasets/BeIR/scifact
+source_type: hugging_face
