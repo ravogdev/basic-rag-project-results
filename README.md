@@ -6,7 +6,8 @@ repository's GitHub Pages site (`index.html`).
 
 - `mlruns/` is an MLflow store in MLflow's file-store format: one folder per experiment and run,
   with params, metrics (MTEB names), tags, dataset inputs and artifacts (`summary.json`,
-  `run.trec`, `per_query.csv`, `mteb/`). Experiments are prefixed `test/`.
+  `run.trec`, `per_query.csv`, `mteb/`). Experiments are prefixed `test/` (Experiments workflow) or `rnd/` (a local run published
+  with `rag-eval mlflow-sync`, noted in `workflow-runs.jsonl`).
 - `learning-resources.html` is an AI-generated reading list published from the source repository's
   docs by its Docs pages workflow.
 - `workflow-runs.jsonl` has one line per workflow run: commit, config and the MLflow run ids it wrote.
