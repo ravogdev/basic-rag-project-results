@@ -1,0 +1,53 @@
+{
+  "dataset_revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+  "task_name": "SciFact",
+  "mteb_version": null,
+  "scores": {
+    "test": [
+      {
+        "ndcg_at_1": 0.65,
+        "ndcg_at_3": 0.6937503349954187,
+        "ndcg_at_5": 0.747830209389445,
+        "ndcg_at_10": 0.747830209389445,
+        "ndcg_at_20": 0.7695143403446905,
+        "ndcg_at_100": 0.7853691931820463,
+        "ndcg_at_1000": 0.7853691931820463,
+        "map_at_1": 0.625,
+        "map_at_3": 0.675,
+        "map_at_5": 0.70375,
+        "map_at_10": 0.70375,
+        "map_at_20": 0.7121416083916083,
+        "map_at_100": 0.7153916083916083,
+        "map_at_1000": 0.7153916083916083,
+        "recall_at_1": 0.625,
+        "recall_at_3": 0.725,
+        "recall_at_5": 0.85,
+        "recall_at_10": 0.85,
+        "recall_at_20": 0.925,
+        "recall_at_100": 1.0,
+        "recall_at_1000": 1.0,
+        "precision_at_1": 0.65,
+        "precision_at_3": 0.25,
+        "precision_at_5": 0.18,
+        "precision_at_10": 0.09,
+        "precision_at_20": 0.05,
+        "precision_at_100": 0.011,
+        "precision_at_1000": 0.0010999999999999998,
+        "mrr_at_1": 0.65,
+        "mrr_at_3": 0.7,
+        "mrr_at_5": 0.735,
+        "mrr_at_10": 0.735,
+        "mrr_at_20": 0.7388461538461539,
+        "mrr_at_100": 0.7400961538461538,
+        "mrr_at_1000": 0.7400961538461538,
+        "main_score": 0.747830209389445,
+        "hf_subset": "default",
+        "languages": [
+          "eng-Latn"
+        ]
+      }
+    ]
+  },
+  "evaluation_time": null,
+  "kg_co2_emissions": null
+}

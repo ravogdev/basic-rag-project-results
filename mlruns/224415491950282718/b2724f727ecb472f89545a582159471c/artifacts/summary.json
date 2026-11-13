@@ -1,0 +1,95 @@
+{
+  "run_id": "8ee91d7b-d268-4672-96db-05afca5c8f22",
+  "name": "minilm-recursive-1000",
+  "experiment": "beir-scifact",
+  "dataset": "beir/scifact",
+  "dataset_revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+  "status": "COMPLETED",
+  "started_at": "2026-11-13T17:53:45.431163223Z",
+  "finished_at": "2026-11-13T18:11:29.672474399Z",
+  "config": {
+    "name": "beir-scifact",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "none",
+      "model": "",
+      "topN": 100
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-scifact"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "queries": "20",
+    "namespace": "beir-scifact",
+    "git_sha": "b9095f7",
+    "smoke": "true"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.7,
+    "ndcg_at_3": 0.7315464876785729,
+    "ndcg_at_5": 0.7662837217108721,
+    "ndcg_at_10": 0.7857316264292747,
+    "ndcg_at_20": 0.7982316264292748,
+    "ndcg_at_100": 0.8143063262987438,
+    "ndcg_at_1000": 0.8143063262987438,
+    "map_at_1": 0.7,
+    "map_at_3": 0.725,
+    "map_at_5": 0.74375,
+    "map_at_10": 0.7528769841269841,
+    "map_at_20": 0.7562103174603174,
+    "map_at_100": 0.7593233442802408,
+    "map_at_1000": 0.7593233442802408,
+    "recall_at_1": 0.7,
+    "recall_at_3": 0.75,
+    "recall_at_5": 0.825,
+    "recall_at_10": 0.875,
+    "recall_at_20": 0.925,
+    "recall_at_100": 1.0,
+    "recall_at_1000": 1.0,
+    "precision_at_1": 0.7,
+    "precision_at_3": 0.25,
+    "precision_at_5": 0.17,
+    "precision_at_10": 0.095,
+    "precision_at_20": 0.05,
+    "precision_at_100": 0.011,
+    "precision_at_1000": 0.0010999999999999998,
+    "mrr_at_1": 0.7,
+    "mrr_at_3": 0.725,
+    "mrr_at_5": 0.75,
+    "mrr_at_10": 0.7571428571428571,
+    "mrr_at_20": 0.7604761904761904,
+    "mrr_at_100": 0.762200328407225,
+    "mrr_at_1000": 0.762200328407225,
+    "main_score": 0.7857316264292747,
+    "latency_ms_mean": 51.55,
+    "latency_ms_p95": 96.0,
+    "index_seconds": 1060.74460225,
+    "index_documents_new": 5183.0,
+    "index_documents_existing": 0.0,
+    "index_documents_empty_skipped": 0.0,
+    "index_chunks_new": 19620.0
+  },
+  "significance": null
+}

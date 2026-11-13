@@ -1,0 +1,9 @@
+artifact_location: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/224415491950282718
+creation_time: 1794593489752
+effective_trace_archival_retention: null
+experiment_id: '224415491950282718'
+last_update_time: 1794593489752
+lifecycle_stage: active
+name: test/beir-scifact
+trace_location: null
+workspace: default
