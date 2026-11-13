@@ -1,0 +1,106 @@
+{
+  "run_id": "5f05dac0-0c9e-40e5-9020-51ead52d6aab",
+  "name": "fiqa-minilm-1000+ce-msmarco-minilm-top50",
+  "experiment": "beir-fiqa",
+  "dataset": "beir/fiqa",
+  "dataset_revision": "979c07a7cb5ccc6ca009792241fa1250b98055dd",
+  "status": "COMPLETED",
+  "started_at": "2026-11-13T15:06:58.008141362Z",
+  "finished_at": "2026-11-13T15:19:42.764704160Z",
+  "config": {
+    "name": "beir-fiqa",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 50,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "cross-encoder",
+      "model": "ms-marco-minilm-l6",
+      "topN": 100
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-fiqa"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "queries": "648",
+    "namespace": "beir-fiqa",
+    "git_sha": "e211dff",
+    "baseline_run_id": "528cca2e-c0cf-4d75-b52c-4afc24f9114a",
+    "baseline_name": "fiqa-minilm-1000+ce-msmarco-minilm-top100"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.35648148148148145,
+    "ndcg_at_3": 0.3392947843414136,
+    "ndcg_at_5": 0.35285968018589314,
+    "ndcg_at_10": 0.3804018365277373,
+    "ndcg_at_20": 0.40759165958289806,
+    "ndcg_at_100": 0.4289999969259972,
+    "ndcg_at_1000": 0.4289999969259972,
+    "map_at_1": 0.18557410525003118,
+    "map_at_3": 0.2618719543488062,
+    "map_at_5": 0.28609861417731786,
+    "map_at_10": 0.30474470624478894,
+    "map_at_20": 0.3146141443001518,
+    "map_at_100": 0.31990924683123617,
+    "map_at_1000": 0.31990924683123617,
+    "recall_at_1": 0.18557410525003118,
+    "recall_at_3": 0.31080979634220374,
+    "recall_at_5": 0.3696244813142961,
+    "recall_at_10": 0.45267052905941796,
+    "recall_at_20": 0.5358874707254337,
+    "recall_at_100": 0.6164736626542182,
+    "recall_at_1000": 0.6164736626542182,
+    "precision_at_1": 0.35648148148148145,
+    "precision_at_3": 0.22479423868312756,
+    "precision_at_5": 0.1675925925925926,
+    "precision_at_10": 0.10679012345679013,
+    "precision_at_20": 0.06489197530864198,
+    "precision_at_100": 0.015231481481481483,
+    "precision_at_1000": 0.001523148148148148,
+    "mrr_at_1": 0.35648148148148145,
+    "mrr_at_3": 0.4261831275720165,
+    "mrr_at_5": 0.43852880658436216,
+    "mrr_at_10": 0.45066872427983545,
+    "mrr_at_20": 0.45639224615779056,
+    "mrr_at_100": 0.4585932987351564,
+    "mrr_at_1000": 0.4585932987351564,
+    "main_score": 0.3804018365277373,
+    "latency_ms_mean": 1151.1064814814815,
+    "latency_ms_p95": 1365.0,
+    "index_seconds": 15.297580325000126,
+    "index_documents_new": 0.0,
+    "index_documents_existing": 57600.0,
+    "index_documents_empty_skipped": 38.0,
+    "index_chunks_new": 0.0,
+    "delta_ndcg_at_10": 0.004831022090931403,
+    "p_value_ndcg_at_10": 0.11778822117788221
+  },
+  "significance": {
+    "metric": "ndcg_at_10",
+    "baseline_run_id": "528cca2e-c0cf-4d75-b52c-4afc24f9114a",
+    "baseline_name": "fiqa-minilm-1000+ce-msmarco-minilm-top100",
+    "delta": 0.004831022090931403,
+    "p_value": 0.11778822117788221,
+    "test": "paired-randomization",
+    "trials": 10000
+  }
+}
