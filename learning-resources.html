@@ -1,0 +1,503 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1"><title>Learning resources</title>
+<style>
+:root { color-scheme: light dark; --fg: #1d1d1f; --muted: #6e6e73; --bg: #fff; --line: #d2d2d7; --head: #f5f5f7;
+        --note-bg: #fff8e1; --note-line: #f9a825; --link: #0a66c2; }
+@media (prefers-color-scheme: dark) { :root { --fg: #f5f5f7; --muted: #a1a1a6; --bg: #161617; --line: #3a3a3c;
+        --head: #232325; --note-bg: #2f2a17; --note-line: #c49000; --link: #4da3ff; } }
+body { font: 16px/1.6 system-ui, sans-serif; color: var(--fg); background: var(--bg); margin: 0 auto;
+       padding: 24px 16px 48px; max-width: 1100px; }
+h1 { font-size: 28px; margin: 8px 0 12px; } h2 { font-size: 21px; margin: 40px 0 12px; }
+a { color: var(--link); } code { font-size: 0.9em; background: var(--head); padding: 1px 4px; border-radius: 4px; }
+blockquote { background: var(--note-bg); border-left: 4px solid var(--note-line); margin: 16px 0;
+                      padding: 10px 14px; border-radius: 4px; }
+blockquote p { margin: 0; }
+.scroll { overflow-x: auto; } table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { border-bottom: 1px solid var(--line); padding: 8px; text-align: left; vertical-align: top; }
+th { background: var(--head); }
+pre.mermaid { background: transparent; text-align: center; overflow-x: auto; }
+img, svg { max-width: 100%; } a { overflow-wrap: anywhere; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+</style></head><body>
+<h1>Learning resources</h1>
+<blockquote>
+<p><strong>Disclaimer: AI-generated content.</strong> This reading list was compiled and written by an AI
+assistant (Claude, by Anthropic) from web searches, at the request of the project maintainer.
+Titles, authors, years and links were checked against search results, but not every source was
+read in full, and the levels and "why it matters" notes are the assistant's own summaries. They
+may contain mistakes or go out of date: check the original source before relying on or citing
+it. Inclusion is not an endorsement, and the list is not exhaustive.</p>
+</blockquote>
+<p>A curated reading list behind the concepts this project uses, for growing as a data scientist. It is
+background for arc42 sections 4 (solution strategy),
+6.3 (evaluation),
+8 (crosscutting concepts) and 10
+(quality requirements). The learning notes explain what this repository does; this page
+points to the papers, documentation and courses that explain why.</p>
+<p>Each entry has a level and a line on why it matters for this project:</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B</strong></td>
+<td>Beginner: no prerequisites beyond basic Python and statistics</td>
+</tr>
+<tr>
+<td><strong>I</strong></td>
+<td>Intermediate: assumes the beginner material of the same topic</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Advanced: research papers or specialised material; read selectively</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Suggested path</h2>
+<p>The topics build on each other. As a UML activity, one pass through the list:</p>
+<pre class="mermaid">
+flowchart TD
+    start(( )) --&gt; found[&quot;&lt;b&gt;Topic 1&lt;/b&gt;&lt;br/&gt;Foundations: IR and ML evaluation basics&quot;]
+    found --&gt; data[&quot;&lt;b&gt;Topic 2&lt;/b&gt;&lt;br/&gt;Datasets and benchmarks:&lt;br/&gt;what BEIR and MTEB measure&quot;]
+    data --&gt; ret[&quot;&lt;b&gt;Topic 3&lt;/b&gt;&lt;br/&gt;Retrieval, embeddings and reranking&quot;]
+    ret --&gt; par{&quot;Comfortable with&lt;br/&gt;nDCG@10 and Recall@k?&quot;}
+    par -- no --&gt; metr[&quot;Re-read the IR metrics material&lt;br/&gt;and step 4&quot;]
+    metr --&gt; par
+    par -- yes --&gt; fork(( ))
+    fork --&gt; val[&quot;&lt;b&gt;Topic 4&lt;/b&gt;&lt;br/&gt;Validation methods and statistics&quot;]
+    fork --&gt; rag[&quot;&lt;b&gt;Topic 5&lt;/b&gt;&lt;br/&gt;RAG and LLM evaluation (RAGAS)&quot;]
+    val --&gt; join(( ))
+    rag --&gt; join
+    join --&gt; ops[&quot;&lt;b&gt;Topic 6&lt;/b&gt;&lt;br/&gt;Experiment tracking, MLOps&lt;br/&gt;and promotion workflows&quot;]
+    ops --&gt; rai[&quot;&lt;b&gt;Topic 7&lt;/b&gt;&lt;br/&gt;Responsible AI and the EU AI Act&quot;]
+    rai --&gt; stop(((&quot; &quot;)))
+</pre>
+<p>Topics 4 and 5 can be read in either order. Topic 7 matters from day one in practice; it comes last
+here only because it is easier to read once you know what is being governed.</p>
+<h2>1. Foundations</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://nlp.stanford.edu/IR-book/">Introduction to Information Retrieval</a> (Manning, Raghavan, Schütze), free online; chapters 1, 6 and 8</td>
+<td>B</td>
+<td>The textbook for inverted indexes, TF-IDF, the vector space model and, in chapter 8, how retrieval is evaluated. Everything in step 4 builds on chapter 8.</td>
+</tr>
+<tr>
+<td><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing, 3rd ed.</a> (Jurafsky, Martin), free online; chapters on embeddings, transformers and information retrieval/RAG</td>
+<td>B</td>
+<td>A clear, current introduction to word and sentence embeddings, transformers and retrieval-augmented question answering.</td>
+</tr>
+<tr>
+<td><a href="https://developers.google.com/machine-learning/crash-course">Google Machine Learning Crash Course</a></td>
+<td>B</td>
+<td>Train/validation/test splits, overfitting, classification metrics and data preparation, with exercises. Good if the general ML evaluation vocabulary is new.</td>
+</tr>
+<tr>
+<td><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn user guide: cross-validation</a> and <a href="https://scikit-learn.org/stable/modules/model_evaluation.html">model evaluation</a></td>
+<td>B</td>
+<td>The practical reference for splits, cross-validation and metrics, with pitfalls spelled out.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1811.12808">Model Evaluation, Model Selection, and Algorithm Selection in Machine Learning</a> (Raschka, 2018)</td>
+<td>I</td>
+<td>One long tutorial covering holdout, bootstrap, cross-validation, nested cross-validation and statistical tests to compare models. The best single bridge from basics to the validation papers in section 4.</td>
+</tr>
+<tr>
+<td><a href="https://web.stanford.edu/class/cs276/">Stanford CS276: Information Retrieval and Web Search</a></td>
+<td>I</td>
+<td>Course slides that follow the IR book and add neural retrieval.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. Datasets and benchmarks</h2>
+<p>How a benchmark is built decides what a score means. Read the dataset papers for the datasets you
+report on, not only the leaderboard.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2104.08663">BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of IR Models</a> (Thakur et al., 2021)</td>
+<td>B</td>
+<td>The benchmark this project evaluates on. Explains corpus/queries/qrels, why nDCG@10 is the headline metric, and why BM25 is a strong zero-shot baseline that many dense models fail to beat.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2210.07316">MTEB: Massive Text Embedding Benchmark</a> (Muennighoff et al., 2022) and the <a href="https://huggingface.co/spaces/mteb/leaderboard">MTEB leaderboard</a></td>
+<td>B</td>
+<td>Where published numbers for embedding models such as all-MiniLM-L6-v2 come from, and the result format this project writes.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2004.14974">Fact or Fiction: Verifying Scientific Claims</a> (Wadden et al., 2020), the SciFact paper</td>
+<td>I</td>
+<td>What a SciFact "query" really is (a scientific claim, not a question) and how relevance was judged. Explains why scores there are high.</td>
+</tr>
+<tr>
+<td><a href="https://www.cl.uni-heidelberg.de/statnlpgroup/nfcorpus/">NFCorpus: A Full-Text Learning to Rank Dataset for Medical IR</a> (Boteva et al., ECIR 2016)</td>
+<td>I</td>
+<td>Many relevant documents per query with graded relevance, which is why Recall@k and nDCG behave differently there than on SciFact.</td>
+</tr>
+<tr>
+<td><a href="https://sites.google.com/view/fiqa/">FiQA 2018 challenge</a> (<a href="https://www.cs.nccu.edu.tw/~hhhuang/docs/fiqa2018.pdf">overview paper</a>)</td>
+<td>I</td>
+<td>Opinion-based financial QA: informal language and long answers, a hard domain shift for general embeddings.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1611.09268">MS MARCO: A Human Generated MAchine Reading COmprehension Dataset</a> (Nguyen et al., 2016)</td>
+<td>I</td>
+<td>The dataset most retrievers and cross-encoders (including ms-marco MiniLM rerankers) are trained on. Knowing it explains their strengths and blind spots.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1803.09010">Datasheets for Datasets</a> (Gebru et al., 2018)</td>
+<td>B</td>
+<td>A checklist of questions to ask about any dataset: motivation, collection, labelling, intended uses. Useful for documenting your own evaluation sets.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2207.07048">Leakage and the Reproducibility Crisis in ML-based Science</a> (Kapoor, Narayanan, 2022) and its <a href="https://reproducible.cs.princeton.edu/">companion site</a></td>
+<td>I</td>
+<td>A taxonomy of data leakage (train/test contamination, temporal leakage, duplicates) found across hundreds of papers. Directly relevant to tuning chunking on the same queries you report on.</td>
+</tr>
+<tr>
+<td><a href="https://research.google/pubs/everyone-wants-to-do-the-model-work-not-the-data-work-data-cascades-in-high-stakes-ai/">"Everyone wants to do the model work, not the data work"</a> (Sambasivan et al., CHI 2021)</td>
+<td>B</td>
+<td>Why data quality problems compound downstream ("data cascades").</td>
+</tr>
+<tr>
+<td><a href="https://research.google/pubs/data-validation-for-machine-learning/">Data Validation for Machine Learning</a> (Breck et al., MLSys 2019)</td>
+<td>A</td>
+<td>How Google validates data schemas and distributions before training or serving; the idea behind tools such as TensorFlow Data Validation and Great Expectations.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>3. Retrieval, embeddings and reranking</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/1908.10084">Sentence-BERT</a> (Reimers, Gurevych, 2019) and the <a href="https://sbert.net">Sentence Transformers documentation</a></td>
+<td>B</td>
+<td>How bi-encoders turn sentences into vectors compared by cosine similarity, and the difference from cross-encoders. The docs explain the retrieve-then-rerank pattern this project uses.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2002.10957">MiniLM: Deep Self-Attention Distillation</a> (Wang et al., 2020)</td>
+<td>A</td>
+<td>The distillation method behind all-MiniLM-L6-v2: why a 6-layer model is fast and still competitive.</td>
+</tr>
+<tr>
+<td><a href="https://staff.city.ac.uk/~sbrp622/papers/foundations_bm25_review.pdf">The Probabilistic Relevance Framework: BM25 and Beyond</a> (Robertson, Zaragoza, 2009)</td>
+<td>I</td>
+<td>The theory behind BM25, the lexical baseline every dense retriever should be compared with, and the first half of the hybrid search on the roadmap.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2004.04906">Dense Passage Retrieval for Open-Domain QA</a> (Karpukhin et al., 2020)</td>
+<td>I</td>
+<td>The paper that made dense retrieval mainstream; introduces in-batch negatives.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1901.04085">Passage Re-ranking with BERT</a> (Nogueira, Cho, 2019)</td>
+<td>I</td>
+<td>The original cross-encoder reranker (monoBERT). Explains why reranking the top-k from a fast retriever gives large nDCG gains.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2010.06467">Pretrained Transformers for Text Ranking: BERT and Beyond</a> (Lin, Nogueira, Yates, 2021)</td>
+<td>A</td>
+<td>A book-length survey of neural ranking: cross-encoders, dense retrieval, multi-stage pipelines, and how to evaluate them. The reference for this whole topic.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2004.12832">ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction</a> (Khattab, Zaharia, 2020)</td>
+<td>A</td>
+<td>The middle ground between bi-encoders and cross-encoders.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2309.07597">C-Pack: Packaged Resources to Advance General Chinese Embedding</a> (Xiao et al., 2023), the BGE paper; <a href="https://arxiv.org/abs/2212.03533">Text Embeddings by Weakly-Supervised Contrastive Pre-training</a> (E5); <a href="https://arxiv.org/abs/2402.01613">Nomic Embed</a></td>
+<td>A</td>
+<td>How current embedding models (bge-reranker, nomic-embed-text, used here) are trained with contrastive learning on large curated pairs.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2304.09542">Is ChatGPT Good at Search? LLMs as Re-Ranking Agents</a> (Sun et al., 2023), RankGPT</td>
+<td>A</td>
+<td>The basis for LLM-based reranking, the second reranker in step 4.</td>
+</tr>
+<tr>
+<td><a href="https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf">Reciprocal Rank Fusion</a> (Cormack, Clarke, Büttcher, SIGIR 2009)</td>
+<td>I</td>
+<td>A two-page paper with the standard way to merge BM25 and vector results. Needed for hybrid search.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2212.10496">Precise Zero-Shot Dense Retrieval without Relevance Labels</a> (Gao et al., 2022), HyDE</td>
+<td>A</td>
+<td>Query rewriting by generating a hypothetical answer first; on the roadmap under query rewriting.</td>
+</tr>
+<tr>
+<td><a href="https://research.trychroma.com/evaluating-chunking">Evaluating Chunking Strategies for Retrieval</a> (Chroma research, 2024) and <a href="https://www.anthropic.com/news/contextual-retrieval">Contextual Retrieval</a> (Anthropic, 2024)</td>
+<td>I</td>
+<td>Two careful, reproducible looks at chunk size, overlap and adding context to chunks, the same questions as the chunking grid in step 4.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Validation methods and statistics</h2>
+<p>A metric without uncertainty is a guess. These explain how to decide whether configuration A is
+really better than B.</p>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://dl.acm.org/doi/10.1145/582415.582418">Cumulated Gain-based Evaluation of IR Techniques</a> (Järvelin, Kekäläinen, 2002)</td>
+<td>I</td>
+<td>The original definition of nDCG. Worth reading once to know exactly what nDCG@10 rewards.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1805.01597">Pytrec_eval</a> (Van Gysel, de Rijke, SIGIR 2018) and <a href="https://arxiv.org/abs/2111.13466">ir-measures</a> (MacAvaney et al., ECIR 2022)</td>
+<td>B</td>
+<td>The scoring libraries the harness uses, and why using standard scoring code makes results comparable with published numbers.</td>
+</tr>
+<tr>
+<td><a href="https://ciir-publications.cs.umass.edu/pub/web/getpdf.php?id=744">A Comparison of Statistical Significance Tests for IR Evaluation</a> (Smucker, Allan, Carterette, CIKM 2007)</td>
+<td>I</td>
+<td>Compares the t-test, randomization (permutation) test, bootstrap, Wilcoxon and sign tests on TREC runs. Recommends the randomization test, the kind of test behind <code>rag-eval compare</code>.</td>
+</tr>
+<tr>
+<td><a href="https://aclanthology.org/P18-1128/">The Hitchhiker's Guide to Testing Statistical Significance in NLP</a> (Dror et al., ACL 2018)</td>
+<td>I</td>
+<td>A decision tree for which test to use, and how to handle comparisons across several datasets.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2010.06595">With Little Power Comes Great Responsibility</a> (Card et al., EMNLP 2020)</td>
+<td>A</td>
+<td>Statistical power: why a few hundred queries (SciFact has 300) often cannot detect a 1-point nDCG difference.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2411.00640">Adding Error Bars to Evals</a> (Miller, 2024)</td>
+<td>I</td>
+<td>Confidence intervals, clustered standard errors and paired comparisons for LLM evaluations; directly applicable to RAGAS scores in step 5.</td>
+</tr>
+<tr>
+<td><a href="https://www.jmlr.org/papers/v11/cawley10a.html">On Over-fitting in Model Selection and Subsequent Selection Bias</a> (Cawley, Talbot, JMLR 2010) and <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1397873/">Bias in Error Estimation when Using Cross-Validation for Model Selection</a> (Varma, Simon, 2006)</td>
+<td>A</td>
+<td>Why the best score in a grid search is optimistically biased, and why you need a held-out set (or nested cross-validation) before promoting a configuration.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2103.03098">Accounting for Variance in Machine Learning Benchmarks</a> (Bouthillier et al., MLSys 2021)</td>
+<td>A</td>
+<td>Sources of variance (seeds, data splits, hyperparameter search) and how many runs you need to trust a comparison.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1807.03341">Troubling Trends in Machine Learning Scholarship</a> (Lipton, Steinhardt, 2018)</td>
+<td>B</td>
+<td>Short and readable: how not to over-claim from results. Good habits for writing up experiments.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>5. RAG and LLM evaluation</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://arxiv.org/abs/2005.11401">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a> (Lewis et al., 2020)</td>
+<td>B</td>
+<td>The paper that named RAG.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2312.10997">Retrieval-Augmented Generation for Large Language Models: A Survey</a> (Gao et al., 2023)</td>
+<td>I</td>
+<td>A map of naive, advanced and modular RAG, and of their evaluation. Useful for placing each roadmap item.</td>
+</tr>
+<tr>
+<td><a href="https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/">DeepLearning.AI: Building and Evaluating Advanced RAG</a></td>
+<td>B</td>
+<td>A two-hour hands-on course on the "RAG triad" (context relevance, groundedness, answer relevance).</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2309.15217">RAGAS: Automated Evaluation of Retrieval Augmented Generation</a> (Es et al., 2023) and the <a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/">Ragas documentation on metrics</a></td>
+<td>I</td>
+<td>The framework planned for step 5: faithfulness, answer relevancy, context precision and recall, and how each is computed by an LLM judge.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2311.09476">ARES: An Automated Evaluation Framework for RAG Systems</a> (Saad-Falcon et al., NAACL 2024)</td>
+<td>A</td>
+<td>Combines an LLM judge with a small human-labelled set and prediction-powered inference to give confidence intervals. The rigorous counterpart to RAGAS.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2405.07437">Evaluation of Retrieval-Augmented Generation: A Survey</a> (Yu et al., 2024)</td>
+<td>A</td>
+<td>Compares RAG benchmarks and metrics, retrieval-side and generation-side.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2306.05685">Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena</a> (Zheng et al., 2023) and <a href="https://arxiv.org/abs/2303.16634">G-Eval</a> (Liu et al., 2023)</td>
+<td>I</td>
+<td>The biases of LLM judges (position, verbosity, self-preference) and how to reduce them. Needed before trusting a local Ollama judge.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2307.03172">Lost in the Middle: How Language Models Use Long Contexts</a> (Liu et al., 2023)</td>
+<td>I</td>
+<td>Why the order and number of retrieved chunks change answer quality, which affects top-k and reranking choices.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2211.09110">Holistic Evaluation of Language Models (HELM)</a> (Liang et al., 2022)</td>
+<td>A</td>
+<td>Evaluating along many axes at once (accuracy, calibration, robustness, fairness, efficiency). A model for designing your own evaluation suite.</td>
+</tr>
+<tr>
+<td><a href="https://hamel.dev/blog/posts/evals/">Your AI Product Needs Evals</a> (Husain) and <a href="https://eugeneyan.com/writing/llm-patterns/">Patterns for Building LLM-based Systems</a> (Yan)</td>
+<td>B</td>
+<td>Practitioner essays on building evaluation into the development loop: unit tests for LLMs, human review, and turning failures into test cases.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>6. Experiment tracking, MLOps and workflow</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://developers.google.com/machine-learning/guides/rules-of-ml">Rules of Machine Learning</a> (Zinkevich, Google)</td>
+<td>B</td>
+<td>43 practical rules from production ML: start simple, measure first, keep the pipeline testable.</td>
+</tr>
+<tr>
+<td><a href="https://mlflow.org/docs/latest/ml/tracking/">MLflow documentation: tracking</a> and <a href="https://mlflow.org/docs/latest/ml/model-registry/">model registry</a></td>
+<td>B</td>
+<td>The tool this project mirrors runs to: parameters, metrics, artifacts, and promoting a model through stages.</td>
+</tr>
+<tr>
+<td><a href="https://madewithml.com">Made With ML</a> (Mohamed)</td>
+<td>B</td>
+<td>A free course from experiment to production: data validation, testing ML code, tracking, CI/CD. Very close to this project's workflow.</td>
+</tr>
+<tr>
+<td><a href="https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">Hidden Technical Debt in Machine Learning Systems</a> (Sculley et al., NeurIPS 2015)</td>
+<td>I</td>
+<td>The classic paper on why ML code is a small part of an ML system, and on entanglement, configuration debt and feedback loops.</td>
+</tr>
+<tr>
+<td><a href="https://research.google/pubs/the-ml-test-score-a-rubric-for-ml-production-readiness-and-technical-debt-reduction/">The ML Test Score</a> (Breck et al., 2017)</td>
+<td>I</td>
+<td>28 concrete tests across data, model, infrastructure and monitoring, with a scoring rubric. A good checklist for the promotion quality gate.</td>
+</tr>
+<tr>
+<td><a href="https://martinfowler.com/articles/cd4ml.html">Continuous Delivery for Machine Learning (CD4ML)</a> (Sato, Wider, Windheuser)</td>
+<td>I</td>
+<td>Versioning data, models and code together and promoting through a pipeline, the idea behind promoting a winning run's config as a file.</td>
+</tr>
+<tr>
+<td><a href="https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning">MLOps: Continuous delivery and automation pipelines in ML</a> (Google Cloud)</td>
+<td>I</td>
+<td>MLOps maturity levels 0 to 2. Useful to place the project and decide what to automate next.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2205.02302">Machine Learning Operations (MLOps): Overview, Definition, and Architecture</a> (Kreuzberger et al., 2022)</td>
+<td>I</td>
+<td>A literature- and interview-based definition of MLOps principles, roles and components.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2003.05155">Towards CRISP-ML(Q)</a> (Studer et al., 2020)</td>
+<td>I</td>
+<td>A process model for ML projects with quality assurance at each phase; a structured alternative to ad-hoc workflows.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2003.12206">Improving Reproducibility in Machine Learning Research</a> (Pineau et al., 2020), with the NeurIPS reproducibility checklist</td>
+<td>I</td>
+<td>What must be recorded for a result to be reproducible: the reason this project stores a full config snapshot with every run.</td>
+</tr>
+<tr>
+<td><a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/">Designing Machine Learning Systems</a> (Huyen, O'Reilly, 2022)</td>
+<td>I</td>
+<td>A book covering data, features, evaluation, deployment and monitoring in production, end to end.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1810.11953">Failing Loudly: Detecting Dataset Shift</a> (Rabanser et al., 2019)</td>
+<td>A</td>
+<td>How to detect when production queries drift away from what was evaluated.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>7. Responsible AI and regulation</h2>
+<div class="scroll"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Level</th>
+<th>Why it matters here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689, the AI Act</a></td>
+<td>I</td>
+<td>The legal text behind eu-ai-act.md. Read Article 50 (transparency for AI systems interacting with people and generating content) and Annex III (high-risk uses) first.</td>
+</tr>
+<tr>
+<td><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> and its <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">Generative AI Profile, NIST AI 600-1</a></td>
+<td>I</td>
+<td>A practical, non-legal framework (govern, map, measure, manage) with a list of generative-AI-specific risks such as confabulation and information integrity.</td>
+</tr>
+<tr>
+<td><a href="https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/">OWASP Top 10 for LLM Applications</a></td>
+<td>B</td>
+<td>Prompt injection, sensitive information disclosure, excessive agency: the security risks to test for, including the open prompt-injection item.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/1810.03993">Model Cards for Model Reporting</a> (Mitchell et al., 2019)</td>
+<td>B</td>
+<td>A standard format for documenting a model's intended use, evaluation data and limits; complements the model inventory.</td>
+</tr>
+<tr>
+<td><a href="https://www.iso.org/standard/42001">ISO/IEC 42001: AI management systems</a></td>
+<td>A</td>
+<td>The management-system standard organisations adopt to show AI governance; useful context when the project meets enterprise compliance.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Publication</h2>
+<p>This page is also published, with its disclaimer, on the results repository's public GitHub Pages
+site as <code>learning-resources.html</code>, by the Docs pages workflow (see
+ci-cd-and-testing.md).</p>
+<h2>Keeping this list current</h2>
+<p>Add a resource when a roadmap step relies on a concept not covered here, and link it from that
+step's learning note. Prefer the original paper plus one practical source per concept, and say why
+it matters for this project.</p>
+<footer><strong>AI-generated content.</strong> This page was compiled and written by an AI assistant (Claude, by Anthropic) and published automatically from the project's documentation. It may contain mistakes or outdated links: check the original sources before relying on or citing them.<br>Published from <code>docs/learning-resources.md</code> on 2026-11-13.
+<a href="./">Experiment results</a>.</footer>
+<script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+mermaid.initialize({ startOnLoad: true, theme: matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "default" });
+</script>
+</body></html>
