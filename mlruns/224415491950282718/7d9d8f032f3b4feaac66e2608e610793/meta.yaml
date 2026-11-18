@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/224415491950282718/7d9d8f032f3b4feaac66e2608e610793/artifacts
+end_time: 1794984020801
+entry_point_name: ''
+experiment_id: '224415491950282718'
+lifecycle_stage: active
+run_id: 7d9d8f032f3b4feaac66e2608e610793
+run_name: minilm-whole-doc-title-once
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794983420908
+status: 3
+tags: []
+user_id: unknown

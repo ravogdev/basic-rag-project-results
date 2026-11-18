@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/224415491950282718/4f295871f24843c680b494a2a0c307d3/artifacts
+end_time: 1794986847984
+entry_point_name: ''
+experiment_id: '224415491950282718'
+lifecycle_stage: active
+run_id: 4f295871f24843c680b494a2a0c307d3
+run_name: minilm-sentence-500-title-once
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794985989934
+status: 3
+tags: []
+user_id: unknown

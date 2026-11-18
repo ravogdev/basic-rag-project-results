@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/224415491950282718/c438540fdcf246f2b54d416f977becbf/artifacts
+end_time: 1794985989559
+entry_point_name: ''
+experiment_id: '224415491950282718'
+lifecycle_stage: active
+run_id: c438540fdcf246f2b54d416f977becbf
+run_name: minilm-recursive-500-title-once
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794985027384
+status: 3
+tags: []
+user_id: unknown

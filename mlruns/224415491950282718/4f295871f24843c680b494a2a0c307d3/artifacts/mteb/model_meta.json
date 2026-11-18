@@ -1,0 +1,29 @@
+{
+  "name": "minilm-sentence-500-title-once",
+  "revision": "43e37a5",
+  "framework": [
+    "basic-rag-project",
+    "rag-eval 0.1.0"
+  ],
+  "embedding": {
+    "provider": "ollama",
+    "model": "all-minilm"
+  },
+  "pipeline": {
+    "chunking": {
+      "strategy": "sentence",
+      "chunkSize": 500,
+      "chunkOverlap": 100
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "none",
+      "model": "",
+      "topN": 100
+    }
+  },
+  "aggregation": "maxp"
+}
