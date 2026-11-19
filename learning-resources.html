@@ -242,12 +242,32 @@ report on, not only the leaderboard.</p>
 <tr>
 <td><a href="https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf">Reciprocal Rank Fusion</a> (Cormack, Clarke, Büttcher, SIGIR 2009)</td>
 <td>I</td>
-<td>A two-page paper with the standard way to merge BM25 and vector results. Needed for hybrid search.</td>
+<td>A two-page paper with the standard way to merge BM25 and vector results. Needed for hybrid search, and used by the <code>multi-query</code> rewriter.</td>
 </tr>
 <tr>
 <td><a href="https://arxiv.org/abs/2212.10496">Precise Zero-Shot Dense Retrieval without Relevance Labels</a> (Gao et al., 2022), HyDE</td>
 <td>A</td>
-<td>Query rewriting by generating a hypothetical answer first; on the roadmap under query rewriting.</td>
+<td>Query rewriting by generating a hypothetical answer first; the <code>hyde</code> rewriter (step 4).</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2305.14283">Query Rewriting for Retrieval-Augmented Large Language Models</a> (Ma et al., EMNLP 2023), Rewrite-Retrieve-Read</td>
+<td>A</td>
+<td>An LLM rewrites the question into a search query before retrieval; the <code>rewrite</code> rewriter.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2305.03653">Query Expansion by Prompting Large Language Models</a> (Jagerman et al., 2023)</td>
+<td>A</td>
+<td>Which prompts expand queries best, and how the gain shrinks with smaller models.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2309.08541">When do Generative Query and Document Expansions Fail?</a> (Weller et al., EACL Findings 2024)</td>
+<td>A</td>
+<td>The counterweight: LLM expansion helps weak retrievers and hurts strong ones, across 24 models. Read it before turning rewriting on.</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/abs/2402.03367">RAG-Fusion</a> (Rackauckas, 2024)</td>
+<td>I</td>
+<td>Several LLM-written queries fused with RRF; the <code>multi-query</code> rewriter.</td>
 </tr>
 <tr>
 <td><a href="https://research.trychroma.com/evaluating-chunking">Evaluating Chunking Strategies for Retrieval</a> (Chroma research, 2024) and <a href="https://www.anthropic.com/news/contextual-retrieval">Contextual Retrieval</a> (Anthropic, 2024)</td>
@@ -494,7 +514,7 @@ ci-cd-and-testing.md).</p>
 <p>Add a resource when a roadmap step relies on a concept not covered here, and link it from that
 step's learning note. Prefer the original paper plus one practical source per concept, and say why
 it matters for this project.</p>
-<footer><strong>AI-generated content.</strong> This page was compiled and written by an AI assistant (Claude, by Anthropic) and published automatically from the project's documentation. It may contain mistakes or outdated links: check the original sources before relying on or citing them.<br>Published from <code>docs/learning-resources.md</code> on 2026-11-13.
+<footer><strong>AI-generated content.</strong> This page was compiled and written by an AI assistant (Claude, by Anthropic) and published automatically from the project's documentation. It may contain mistakes or outdated links: check the original sources before relying on or citing them.<br>Published from <code>docs/learning-resources.md</code> on 2026-11-19.
 <a href="./">Experiment results</a>.</footer>
 <script type="module">
 import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
