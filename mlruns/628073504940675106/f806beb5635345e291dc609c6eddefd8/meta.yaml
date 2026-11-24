@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/628073504940675106/f806beb5635345e291dc609c6eddefd8/artifacts
+end_time: 1795513774607
+entry_point_name: ''
+experiment_id: '628073504940675106'
+lifecycle_stage: active
+run_id: f806beb5635345e291dc609c6eddefd8
+run_name: nfcorpus-serving-minilm-recursive-1000-top50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795513681202
+status: 3
+tags: []
+user_id: unknown

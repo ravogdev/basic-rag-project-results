@@ -1,0 +1,455 @@
+{
+  "rule": "lowest unanswerable_answered_rate with answerable_abstained_rate <= 0.1; ties to the lowest threshold",
+  "answerable_queries": 809,
+  "unanswerable": [
+    {
+      "source": "beir/fiqa/dev",
+      "key": "fiqa_dev",
+      "queries": 500,
+      "selection": true
+    },
+    {
+      "source": "beir/nfcorpus/dev",
+      "key": "nfcorpus_dev",
+      "queries": 324,
+      "selection": false
+    }
+  ],
+  "serving": {
+    "threshold": 0.5,
+    "answerable_abstained_rate": 0.0,
+    "unanswerable_answered_rate": 1.0,
+    "unanswerable_answered_rate_by_source": {
+      "fiqa_dev": 1.0,
+      "nfcorpus_dev": 1.0
+    },
+    "ndcg_at_10": 0.6989996051199242,
+    "recall_at_10": 0.7483312731767614
+  },
+  "selected": {
+    "threshold": 0.75,
+    "answerable_abstained_rate": 0.07045735475896164,
+    "unanswerable_answered_rate": 0.004,
+    "unanswerable_answered_rate_by_source": {
+      "fiqa_dev": 0.004,
+      "nfcorpus_dev": 0.35185185185185186
+    },
+    "ndcg_at_10": 0.6574070993625322,
+    "recall_at_10": 0.6933250927070457
+  },
+  "points": [
+    {
+      "threshold": 0.0,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.05,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.1,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.15,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.2,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.25,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.3,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.35,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.4,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.45,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.5,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.55,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.6,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 0.984,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.984,
+        "nfcorpus_dev": 1.0
+      },
+      "ndcg_at_10": 0.6989996051199242,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.65,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 0.354,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.354,
+        "nfcorpus_dev": 0.9228395061728395
+      },
+      "ndcg_at_10": 0.6994558106161277,
+      "recall_at_10": 0.7483312731767614
+    },
+    {
+      "threshold": 0.7,
+      "answerable_abstained_rate": 0.008652657601977753,
+      "unanswerable_answered_rate": 0.046,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.046,
+        "nfcorpus_dev": 0.7191358024691358
+      },
+      "ndcg_at_10": 0.6954802171927629,
+      "recall_at_10": 0.742150803461063
+    },
+    {
+      "threshold": 0.75,
+      "answerable_abstained_rate": 0.07045735475896164,
+      "unanswerable_answered_rate": 0.004,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.004,
+        "nfcorpus_dev": 0.35185185185185186
+      },
+      "ndcg_at_10": 0.6574070993625322,
+      "recall_at_10": 0.6933250927070457
+    },
+    {
+      "threshold": 0.8,
+      "answerable_abstained_rate": 0.23856613102595803,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "nfcorpus_dev": 0.10493827160493827
+      },
+      "ndcg_at_10": 0.5335465767596514,
+      "recall_at_10": 0.5533992583436341
+    },
+    {
+      "threshold": 0.85,
+      "answerable_abstained_rate": 0.588380716934487,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "nfcorpus_dev": 0.012345679012345678
+      },
+      "ndcg_at_10": 0.3149954635020353,
+      "recall_at_10": 0.31829419035846723
+    },
+    {
+      "threshold": 0.9,
+      "answerable_abstained_rate": 0.8504326328800988,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "nfcorpus_dev": 0.0030864197530864196
+      },
+      "ndcg_at_10": 0.11564697423569878,
+      "recall_at_10": 0.11536876802637
+    }
+  ],
+  "reranker_gate": {
+    "served": false,
+    "gate": "minScore 0.5 on the vector score, reranking, topN 5, then the reranker score >= threshold; abstain when no chunk is left",
+    "selected": {
+      "threshold": 0.1,
+      "answerable_abstained_rate": 0.0791100123609394,
+      "unanswerable_answered_rate": 0.004,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.004,
+        "nfcorpus_dev": 0.39814814814814814
+      },
+      "ndcg_at_10": 0.66905919773216,
+      "recall_at_10": 0.703831891223733
+    },
+    "points": [
+      {
+        "threshold": 0.0,
+        "answerable_abstained_rate": 0.0,
+        "unanswerable_answered_rate": 1.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 1.0,
+          "nfcorpus_dev": 1.0
+        },
+        "ndcg_at_10": 0.6989996051199242,
+        "recall_at_10": 0.7483312731767614
+      },
+      {
+        "threshold": 0.01,
+        "answerable_abstained_rate": 0.01977750309023485,
+        "unanswerable_answered_rate": 0.014,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.014,
+          "nfcorpus_dev": 0.558641975308642
+        },
+        "ndcg_at_10": 0.6914538853641815,
+        "recall_at_10": 0.7359703337453646
+      },
+      {
+        "threshold": 0.02,
+        "answerable_abstained_rate": 0.030902348578491945,
+        "unanswerable_answered_rate": 0.012,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.012,
+          "nfcorpus_dev": 0.5061728395061729
+        },
+        "ndcg_at_10": 0.6841325510900262,
+        "recall_at_10": 0.7260815822002472
+      },
+      {
+        "threshold": 0.05,
+        "answerable_abstained_rate": 0.05438813349814586,
+        "unanswerable_answered_rate": 0.006,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.006,
+          "nfcorpus_dev": 0.44753086419753085
+        },
+        "ndcg_at_10": 0.6771282310959799,
+        "recall_at_10": 0.7161928306551297
+      },
+      {
+        "threshold": 0.1,
+        "answerable_abstained_rate": 0.0791100123609394,
+        "unanswerable_answered_rate": 0.004,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.004,
+          "nfcorpus_dev": 0.39814814814814814
+        },
+        "ndcg_at_10": 0.66905919773216,
+        "recall_at_10": 0.703831891223733
+      },
+      {
+        "threshold": 0.15,
+        "answerable_abstained_rate": 0.09517923362175529,
+        "unanswerable_answered_rate": 0.004,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.004,
+          "nfcorpus_dev": 0.37037037037037035
+        },
+        "ndcg_at_10": 0.6588467632363096,
+        "recall_at_10": 0.6927070457354758
+      },
+      {
+        "threshold": 0.2,
+        "answerable_abstained_rate": 0.107540173053152,
+        "unanswerable_answered_rate": 0.004,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.004,
+          "nfcorpus_dev": 0.3395061728395062
+        },
+        "ndcg_at_10": 0.656212733874664,
+        "recall_at_10": 0.6889987639060569
+      },
+      {
+        "threshold": 0.3,
+        "answerable_abstained_rate": 0.12731767614338685,
+        "unanswerable_answered_rate": 0.002,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.002,
+          "nfcorpus_dev": 0.30864197530864196
+        },
+        "ndcg_at_10": 0.6479401305802062,
+        "recall_at_10": 0.67663782447466
+      },
+      {
+        "threshold": 0.4,
+        "answerable_abstained_rate": 0.13967861557478367,
+        "unanswerable_answered_rate": 0.002,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.002,
+          "nfcorpus_dev": 0.2716049382716049
+        },
+        "ndcg_at_10": 0.6398729659114859,
+        "recall_at_10": 0.6660898228265348
+      },
+      {
+        "threshold": 0.5,
+        "answerable_abstained_rate": 0.16810877626699627,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.25617283950617287
+        },
+        "ndcg_at_10": 0.6245762950834163,
+        "recall_at_10": 0.6494025545941492
+      },
+      {
+        "threshold": 0.6,
+        "answerable_abstained_rate": 0.1915945611866502,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.24074074074074073
+        },
+        "ndcg_at_10": 0.6099003247595943,
+        "recall_at_10": 0.6325092707045735
+      },
+      {
+        "threshold": 0.7,
+        "answerable_abstained_rate": 0.22867737948084055,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.21604938271604937
+        },
+        "ndcg_at_10": 0.5904880302722524,
+        "recall_at_10": 0.6121755253399258
+      },
+      {
+        "threshold": 0.8,
+        "answerable_abstained_rate": 0.2583436341161929,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.17901234567901234
+        },
+        "ndcg_at_10": 0.5696326618072552,
+        "recall_at_10": 0.5889987639060569
+      },
+      {
+        "threshold": 0.9,
+        "answerable_abstained_rate": 0.3386897404202719,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.14506172839506173
+        },
+        "ndcg_at_10": 0.5206439440640925,
+        "recall_at_10": 0.5341985990935312
+      },
+      {
+        "threshold": 0.95,
+        "answerable_abstained_rate": 0.41038318912237326,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.10802469135802469
+        },
+        "ndcg_at_10": 0.4737542007865431,
+        "recall_at_10": 0.484754841367944
+      },
+      {
+        "threshold": 0.98,
+        "answerable_abstained_rate": 0.5080346106304079,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.07098765432098765
+        },
+        "ndcg_at_10": 0.4061571884044212,
+        "recall_at_10": 0.4094561186650185
+      },
+      {
+        "threshold": 0.99,
+        "answerable_abstained_rate": 0.5710754017305315,
+        "unanswerable_answered_rate": 0.0,
+        "unanswerable_answered_rate_by_source": {
+          "fiqa_dev": 0.0,
+          "nfcorpus_dev": 0.046296296296296294
+        },
+        "ndcg_at_10": 0.36476701193615413,
+        "recall_at_10": 0.3657807993407499
+      }
+    ]
+  }
+}

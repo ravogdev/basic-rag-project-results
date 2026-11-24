@@ -1,0 +1,83 @@
+[
+  {
+    "step": "check-models",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T09:56:07.131963+00:00",
+    "finished_at": "2026-11-24T09:56:18.668818+00:00",
+    "seconds": 11.536741699994309,
+    "outputs": {
+      "models": 3,
+      "digests_known": 3
+    }
+  },
+  {
+    "step": "start-run",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T09:56:18.668837+00:00",
+    "finished_at": "2026-11-24T09:56:18.680430+00:00",
+    "seconds": 0.01159949999419041,
+    "outputs": {}
+  },
+  {
+    "step": "index",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T09:56:18.680475+00:00",
+    "finished_at": "2026-11-24T09:56:30.485249+00:00",
+    "seconds": 11.804669999983162,
+    "outputs": {
+      "documents_new": 0.0,
+      "documents_existing": 3633.0,
+      "documents_replaced": 0.0,
+      "duplicate_text": 40.0,
+      "chunks_new": 0.0
+    }
+  },
+  {
+    "step": "query",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T09:56:30.485261+00:00",
+    "finished_at": "2026-11-24T10:05:07.524891+00:00",
+    "seconds": 517.0348284000065,
+    "outputs": {
+      "queries": 324
+    }
+  },
+  {
+    "step": "query-unanswerable",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T10:05:07.524904+00:00",
+    "finished_at": "2026-11-24T10:44:43.171565+00:00",
+    "seconds": 2375.6249793999887,
+    "outputs": {
+      "queries": 1309
+    }
+  },
+  {
+    "step": "score",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T10:44:43.171592+00:00",
+    "finished_at": "2026-11-24T10:44:45.050398+00:00",
+    "seconds": 1.8788115000061225,
+    "outputs": {
+      "main_score": 0.22017646801570034
+    }
+  },
+  {
+    "step": "compare",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T10:44:45.050428+00:00",
+    "finished_at": "2026-11-24T10:44:45.416216+00:00",
+    "seconds": 0.36579349997919053,
+    "outputs": {
+      "p_value": 9.999000099990002e-05
+    }
+  },
+  {
+    "step": "record",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T10:44:45.416234+00:00",
+    "finished_at": "2026-11-24T10:44:45.645157+00:00",
+    "seconds": 0.22892850000062026,
+    "outputs": {}
+  }
+]

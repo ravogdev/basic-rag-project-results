@@ -1,0 +1,6 @@
+digest: b5026a0e96e8a7ac4f95f482a596389289d4
+name: beir/nfcorpus
+profile: null
+schema: null
+source: https://huggingface.co/datasets/BeIR/nfcorpus
+source_type: hugging_face

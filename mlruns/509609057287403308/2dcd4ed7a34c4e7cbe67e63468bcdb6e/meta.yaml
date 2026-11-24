@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/509609057287403308/2dcd4ed7a34c4e7cbe67e63468bcdb6e/artifacts
+end_time: 1795508727505
+entry_point_name: ''
+experiment_id: '509609057287403308'
+lifecycle_stage: active
+run_id: 2dcd4ed7a34c4e7cbe67e63468bcdb6e
+run_name: scifact-serving-minilm-recursive-1000-top50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795508629088
+status: 3
+tags: []
+user_id: unknown

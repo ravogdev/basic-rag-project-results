@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/509609057287403308/bcfda697d37a4890b567cdafc75f15eb/artifacts
+end_time: 1795512919070
+entry_point_name: ''
+experiment_id: '509609057287403308'
+lifecycle_stage: active
+run_id: bcfda697d37a4890b567cdafc75f15eb
+run_name: scifact-serving-minilm-recursive-1000+ce-bge-v2-m3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795509138895
+status: 3
+tags: []
+user_id: unknown

@@ -1,0 +1,9 @@
+artifact_location: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/509609057287403308
+creation_time: 1795550261089
+effective_trace_archival_retention: null
+experiment_id: '509609057287403308'
+last_update_time: 1795550261089
+lifecycle_stage: active
+name: rnd/serving-abstention-rerank-scifact
+trace_location: null
+workspace: default

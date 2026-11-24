@@ -1,0 +1,83 @@
+[
+  {
+    "step": "check-models",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:25:36.889172+00:00",
+    "finished_at": "2026-11-24T08:25:41.541445+00:00",
+    "seconds": 4.652204300015001,
+    "outputs": {
+      "models": 3,
+      "digests_known": 3
+    }
+  },
+  {
+    "step": "start-run",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:25:41.541466+00:00",
+    "finished_at": "2026-11-24T08:25:41.556180+00:00",
+    "seconds": 0.014719500002684072,
+    "outputs": {}
+  },
+  {
+    "step": "index",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:25:41.556225+00:00",
+    "finished_at": "2026-11-24T08:25:58.349033+00:00",
+    "seconds": 16.792579100001603,
+    "outputs": {
+      "documents_new": 0.0,
+      "documents_existing": 5183.0,
+      "documents_replaced": 0.0,
+      "duplicate_text": 0.0,
+      "chunks_new": 0.0
+    }
+  },
+  {
+    "step": "query",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:25:58.349046+00:00",
+    "finished_at": "2026-11-24T08:29:00.932282+00:00",
+    "seconds": 182.58069139998406,
+    "outputs": {
+      "queries": 809
+    }
+  },
+  {
+    "step": "query-unanswerable",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:29:00.932302+00:00",
+    "finished_at": "2026-11-24T08:31:54.509457+00:00",
+    "seconds": 173.5751103000075,
+    "outputs": {
+      "queries": 824
+    }
+  },
+  {
+    "step": "score",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:31:54.509470+00:00",
+    "finished_at": "2026-11-24T08:31:56.731963+00:00",
+    "seconds": 2.2224782000121195,
+    "outputs": {
+      "main_score": 0.6989996051199242
+    }
+  },
+  {
+    "step": "compare",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:31:56.731979+00:00",
+    "finished_at": "2026-11-24T08:31:57.613170+00:00",
+    "seconds": 0.8811910999938846,
+    "outputs": {
+      "p_value": 9.999000099990002e-05
+    }
+  },
+  {
+    "step": "record",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T08:31:57.613189+00:00",
+    "finished_at": "2026-11-24T08:31:57.859337+00:00",
+    "seconds": 0.2461538999923505,
+    "outputs": {}
+  }
+]

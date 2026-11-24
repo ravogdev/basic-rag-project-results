@@ -1,0 +1,251 @@
+{
+  "rule": "lowest unanswerable_answered_rate with answerable_abstained_rate <= 0.1; ties to the lowest threshold",
+  "answerable_queries": 324,
+  "unanswerable": [
+    {
+      "source": "beir/fiqa/dev",
+      "key": "fiqa_dev",
+      "queries": 500,
+      "selection": true
+    },
+    {
+      "source": "beir/scifact/train",
+      "key": "scifact_train",
+      "queries": 809,
+      "selection": false
+    }
+  ],
+  "serving": {
+    "threshold": 0.5,
+    "answerable_abstained_rate": 0.0,
+    "unanswerable_answered_rate": 1.0,
+    "unanswerable_answered_rate_by_source": {
+      "fiqa_dev": 1.0,
+      "scifact_train": 1.0
+    },
+    "ndcg_at_10": 0.18422204267992673,
+    "recall_at_10": 0.07017863463306513
+  },
+  "selected": {
+    "threshold": 0.65,
+    "answerable_abstained_rate": 0.03395061728395066,
+    "unanswerable_answered_rate": 0.26,
+    "unanswerable_answered_rate_by_source": {
+      "fiqa_dev": 0.26,
+      "scifact_train": 0.9864029666254636
+    },
+    "ndcg_at_10": 0.18231623235842534,
+    "recall_at_10": 0.06941499932326393
+  },
+  "points": [
+    {
+      "threshold": 0.0,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.05,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.1,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.15,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.2,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.25,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.3,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.35,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.4,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.45,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.5,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.55,
+      "answerable_abstained_rate": 0.0,
+      "unanswerable_answered_rate": 1.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 1.0,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.6,
+      "answerable_abstained_rate": 0.0030864197530864335,
+      "unanswerable_answered_rate": 0.936,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.936,
+        "scifact_train": 1.0
+      },
+      "ndcg_at_10": 0.18422204267992673,
+      "recall_at_10": 0.07017863463306513
+    },
+    {
+      "threshold": 0.65,
+      "answerable_abstained_rate": 0.03395061728395066,
+      "unanswerable_answered_rate": 0.26,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.26,
+        "scifact_train": 0.9864029666254636
+      },
+      "ndcg_at_10": 0.18231623235842534,
+      "recall_at_10": 0.06941499932326393
+    },
+    {
+      "threshold": 0.7,
+      "answerable_abstained_rate": 0.13271604938271608,
+      "unanswerable_answered_rate": 0.04,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.04,
+        "scifact_train": 0.8504326328800988
+      },
+      "ndcg_at_10": 0.1745733880188313,
+      "recall_at_10": 0.06735242001379227
+    },
+    {
+      "threshold": 0.75,
+      "answerable_abstained_rate": 0.2685185185185185,
+      "unanswerable_answered_rate": 0.006,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.006,
+        "scifact_train": 0.40296662546353523
+      },
+      "ndcg_at_10": 0.1535410473542626,
+      "recall_at_10": 0.05384304519457934
+    },
+    {
+      "threshold": 0.8,
+      "answerable_abstained_rate": 0.5740740740740741,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "scifact_train": 0.13720642768850433
+      },
+      "ndcg_at_10": 0.09944535509790126,
+      "recall_at_10": 0.02560611672764417
+    },
+    {
+      "threshold": 0.85,
+      "answerable_abstained_rate": 0.7962962962962963,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "scifact_train": 0.038318912237330034
+      },
+      "ndcg_at_10": 0.04455550625961276,
+      "recall_at_10": 0.01180811370293136
+    },
+    {
+      "threshold": 0.9,
+      "answerable_abstained_rate": 0.9444444444444444,
+      "unanswerable_answered_rate": 0.0,
+      "unanswerable_answered_rate_by_source": {
+        "fiqa_dev": 0.0,
+        "scifact_train": 0.003708281829419036
+      },
+      "ndcg_at_10": 0.011155129871821698,
+      "recall_at_10": 0.0037573200289841794
+    }
+  ]
+}

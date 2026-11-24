@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/509609057287403308/f4bee5d6a6de4d30806184260dd4efbe/artifacts
+end_time: 1795509117840
+entry_point_name: ''
+experiment_id: '509609057287403308'
+lifecycle_stage: active
+run_id: f4bee5d6a6de4d30806184260dd4efbe
+run_name: scifact-serving-minilm-recursive-1000+ce-msmarco-minilm
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795508741543
+status: 3
+tags: []
+user_id: unknown

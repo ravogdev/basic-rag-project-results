@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/628073504940675106/45c98a2d076f421aa50d806db820cfaf/artifacts
+end_time: 1795517085622
+entry_point_name: ''
+experiment_id: '628073504940675106'
+lifecycle_stage: active
+run_id: 45c98a2d076f421aa50d806db820cfaf
+run_name: nfcorpus-serving-minilm-recursive-1000+ce-bge-v2-m3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795514178671
+status: 3
+tags: []
+user_id: unknown

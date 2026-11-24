@@ -1,0 +1,9 @@
+artifact_location: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/628073504940675106
+creation_time: 1795550255851
+effective_trace_archival_retention: null
+experiment_id: '628073504940675106'
+last_update_time: 1795550255851
+lifecycle_stage: active
+name: rnd/serving-abstention-rerank-nfcorpus
+trace_location: null
+workspace: default
