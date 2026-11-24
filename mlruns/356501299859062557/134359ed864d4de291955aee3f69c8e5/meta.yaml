@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/356501299859062557/134359ed864d4de291955aee3f69c8e5/artifacts
+end_time: 1795498578880
+entry_point_name: ''
+experiment_id: '356501299859062557'
+lifecycle_stage: active
+run_id: 134359ed864d4de291955aee3f69c8e5
+run_name: fiqa-minilm-recursive-500
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795496833282
+status: 3
+tags: []
+user_id: unknown

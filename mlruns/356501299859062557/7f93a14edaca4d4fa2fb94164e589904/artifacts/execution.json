@@ -1,0 +1,63 @@
+[
+  {
+    "step": "check-models",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T04:46:37.589690+00:00",
+    "finished_at": "2026-11-24T04:46:42.043589+00:00",
+    "seconds": 4.453863800008548,
+    "outputs": {
+      "models": 2,
+      "digests_known": 2
+    }
+  },
+  {
+    "step": "start-run",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T04:46:42.043609+00:00",
+    "finished_at": "2026-11-24T04:46:42.056864+00:00",
+    "seconds": 0.013261500018415973,
+    "outputs": {}
+  },
+  {
+    "step": "index",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T04:46:42.056910+00:00",
+    "finished_at": "2026-11-24T05:02:03.001075+00:00",
+    "seconds": 920.9372714000056,
+    "outputs": {
+      "documents_new": 57598.0,
+      "documents_existing": 2.0,
+      "documents_replaced": 0.0,
+      "duplicate_text": 2.0,
+      "chunks_new": 57628.0
+    }
+  },
+  {
+    "step": "query",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T05:02:03.001101+00:00",
+    "finished_at": "2026-11-24T05:02:46.274700+00:00",
+    "seconds": 43.2732820000092,
+    "outputs": {
+      "queries": 648
+    }
+  },
+  {
+    "step": "score",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T05:02:46.274714+00:00",
+    "finished_at": "2026-11-24T05:02:46.595718+00:00",
+    "seconds": 0.3210116999980528,
+    "outputs": {
+      "main_score": 0.36709362356510683
+    }
+  },
+  {
+    "step": "record",
+    "status": "COMPLETED",
+    "started_at": "2026-11-24T05:02:46.595736+00:00",
+    "finished_at": "2026-11-24T05:02:46.666926+00:00",
+    "seconds": 0.07120089998352341,
+    "outputs": {}
+  }
+]

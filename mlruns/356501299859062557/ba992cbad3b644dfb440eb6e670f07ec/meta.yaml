@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/356501299859062557/ba992cbad3b644dfb440eb6e670f07ec/artifacts
+end_time: 1795507752038
+entry_point_name: ''
+experiment_id: '356501299859062557'
+lifecycle_stage: active
+run_id: ba992cbad3b644dfb440eb6e670f07ec
+run_name: fiqa-minilm-1000+ce-msmarco-minilm-top100
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795507138002
+status: 3
+tags: []
+user_id: unknown

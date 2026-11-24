@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/356501299859062557/7f93a14edaca4d4fa2fb94164e589904/artifacts
+end_time: 1795496566652
+entry_point_name: ''
+experiment_id: '356501299859062557'
+lifecycle_stage: active
+run_id: 7f93a14edaca4d4fa2fb94164e589904
+run_name: fiqa-minilm-whole-doc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795495602046
+status: 3
+tags: []
+user_id: unknown
