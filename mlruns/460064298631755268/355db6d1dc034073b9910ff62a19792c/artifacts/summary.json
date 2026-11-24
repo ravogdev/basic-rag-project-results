@@ -1,0 +1,112 @@
+{
+  "run_id": "18b0b5b0-1c7c-4cb0-ac4f-7efbb9f3816f",
+  "name": "minilm-recursive-1000",
+  "experiment": "beir-scifact",
+  "dataset": "beir/scifact",
+  "dataset_revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+  "status": "COMPLETED",
+  "started_at": "2026-11-24T03:21:33.246046200Z",
+  "finished_at": "2026-11-24T03:22:08.422060Z",
+  "config": {
+    "name": "beir-scifact",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "none",
+      "model": "",
+      "topN": 100
+    },
+    "rewriting": {
+      "strategy": "none",
+      "model": "",
+      "count": 0,
+      "instruction": ""
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-scifact"
+  },
+  "tags": {
+    "harness": "rag-eval 0.1.0",
+    "benchmark": "beir",
+    "split": "test",
+    "aggregation": "maxp",
+    "title_in_text": "true",
+    "text_convention": "title-joined-once-by-app",
+    "operating_point": "benchmark",
+    "queries": "300",
+    "namespace": "beir-scifact",
+    "experiment_id": "exp-7e897a80487c4f8d",
+    "git_sha": "ed7f1fb"
+  },
+  "notes": null,
+  "metrics": {
+    "ndcg_at_1": 0.54,
+    "ndcg_at_3": 0.6191011254480376,
+    "ndcg_at_5": 0.6411854733216412,
+    "ndcg_at_10": 0.6728311703322024,
+    "ndcg_at_20": 0.6859921554487208,
+    "ndcg_at_100": 0.6948577332652697,
+    "ndcg_at_1000": 0.6948577332652697,
+    "map_at_1": 0.519,
+    "map_at_3": 0.5911481481481481,
+    "map_at_5": 0.6057981481481481,
+    "map_at_10": 0.6217650793650793,
+    "map_at_20": 0.6257797615611083,
+    "map_at_100": 0.627406695113843,
+    "map_at_1000": 0.627406695113843,
+    "recall_at_1": 0.519,
+    "recall_at_3": 0.6750555555555556,
+    "recall_at_5": 0.7294444444444445,
+    "recall_at_10": 0.8183333333333334,
+    "recall_at_20": 0.8679999999999999,
+    "recall_at_100": 0.9093333333333333,
+    "recall_at_1000": 0.9093333333333333,
+    "precision_at_1": 0.54,
+    "precision_at_3": 0.2422222222222222,
+    "precision_at_5": 0.16,
+    "precision_at_10": 0.092,
+    "precision_at_20": 0.04883333333333333,
+    "precision_at_100": 0.010333333333333333,
+    "precision_at_1000": 0.0010333333333333334,
+    "mrr_at_1": 0.54,
+    "mrr_at_3": 0.6094444444444445,
+    "mrr_at_5": 0.6201111111111111,
+    "mrr_at_10": 0.6315780423280423,
+    "mrr_at_20": 0.6350495010808479,
+    "mrr_at_100": 0.636387803910638,
+    "mrr_at_1000": 0.636387803910638,
+    "main_score": 0.6728311703322024,
+    "latency_ms_mean": 30.576666666666668,
+    "latency_ms_p95": 35.0,
+    "index_seconds": 17.34910740001942,
+    "index_documents_new": 0.0,
+    "index_documents_existing": 5183.0,
+    "index_documents_replaced": 0.0,
+    "index_documents_empty_skipped": 0.0,
+    "index_chunks_new": 0.0,
+    "index_documents_duplicate_text": 0.0,
+    "qrels_relevant_unreachable": 0.0,
+    "step_check_models_seconds": 2.4435062000120524,
+    "step_start_run_seconds": 0.0127832000143826,
+    "step_index_seconds": 17.380036999995355,
+    "step_query_seconds": 17.627852000005078,
+    "step_score_seconds": 0.10283960000379011
+  },
+  "experiment_id": "exp-7e897a80487c4f8d",
+  "significance": null
+}

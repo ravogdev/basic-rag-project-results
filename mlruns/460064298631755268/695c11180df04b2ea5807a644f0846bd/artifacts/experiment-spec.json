@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "dataset": {
+    "name": "scifact",
+    "label": "beir/scifact",
+    "split": "test",
+    "queries": 300,
+    "max_queries": null,
+    "revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+    "card": "https://huggingface.co/datasets/BeIR/scifact",
+    "license": null,
+    "files": [
+      {
+        "source": "https://huggingface.co/datasets/BeIR/scifact/resolve/b3b5335604bf5ee3c4447671af975ea25143d4f5/corpus/corpus-00000-of-00001.parquet",
+        "repo": "BeIR/scifact",
+        "path": "corpus/corpus-00000-of-00001.parquet",
+        "revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+        "sha256": "243324b35f03d82bd6d98a5f575966876e86cad7ce16e5333a35b1b793dc4f45",
+        "bytes": 4469916
+      },
+      {
+        "source": "https://huggingface.co/datasets/BeIR/scifact/resolve/b3b5335604bf5ee3c4447671af975ea25143d4f5/queries/queries-00000-of-00001.parquet",
+        "repo": "BeIR/scifact",
+        "path": "queries/queries-00000-of-00001.parquet",
+        "revision": "b3b5335604bf5ee3c4447671af975ea25143d4f5",
+        "sha256": "1c37956c5dc8b810b60302323c24d1a9e79e26411ba8f5ad9d0888642e2a9034",
+        "bytes": 64982
+      },
+      {
+        "source": "https://huggingface.co/datasets/BeIR/scifact-qrels/resolve/2938d17dc3b09882fdb8c12bbbe2e2dc0e75a029/test.tsv",
+        "repo": "BeIR/scifact-qrels",
+        "path": "test.tsv",
+        "revision": "2938d17dc3b09882fdb8c12bbbe2e2dc0e75a029",
+        "sha256": "0864bb985e0ca2367ba217977e72004d549054b2b06666ed9d4825ac7c21284c",
+        "bytes": 5389
+      }
+    ]
+  },
+  "config": {
+    "name": "beir-scifact",
+    "chunking": {
+      "strategy": "recursive",
+      "chunkSize": 1000,
+      "chunkOverlap": 200
+    },
+    "embedding": {
+      "provider": "ollama",
+      "model": "all-minilm"
+    },
+    "retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "reranking": {
+      "strategy": "cross-encoder",
+      "model": "ms-marco-minilm-l6",
+      "topN": 100
+    },
+    "rewriting": {
+      "strategy": "none",
+      "model": "",
+      "count": 0,
+      "instruction": ""
+    },
+    "generation": {
+      "provider": "ollama",
+      "model": "llama3.1:8b",
+      "temperature": 0.0
+    },
+    "namespace": "beir-scifact"
+  },
+  "harness": {
+    "title_in_text": true,
+    "text_convention": "title-joined-once-by-app",
+    "batch_size": 200,
+    "aggregation": "maxp",
+    "operating_point": "benchmark",
+    "eval_retrieval": {
+      "topK": 100,
+      "minScore": 0.0
+    },
+    "experiment": "beir-scifact",
+    "baseline": "minilm-recursive-1000"
+  },
+  "models": [
+    {
+      "role": "embedding",
+      "provider": "ollama",
+      "name": "all-minilm",
+      "digest": "1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef"
+    },
+    {
+      "role": "reranker",
+      "provider": "onnx",
+      "name": "ms-marco-minilm-l6",
+      "repo": "Xenova/ms-marco-MiniLM-L-6-v2",
+      "source": "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2",
+      "files": [
+        {
+          "path": "model.onnx",
+          "sha256": "c623d0bcb99f4622beb413eaef00cfbe5db20df9f1dd982da4b4f26022881870"
+        },
+        {
+          "path": "tokenizer.json",
+          "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+        }
+      ]
+    },
+    {
+      "role": "generation",
+      "provider": "ollama",
+      "name": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e"
+    }
+  ],
+  "steps": [
+    {
+      "step": "fetch-dataset",
+      "inputs": {
+        "label": "beir/scifact",
+        "split": "test",
+        "files": 3
+      }
+    },
+    {
+      "step": "check-models",
+      "inputs": {
+        "models": [
+          "all-minilm",
+          "ms-marco-minilm-l6",
+          "llama3.1:8b"
+        ]
+      }
+    },
+    {
+      "step": "start-run",
+      "inputs": {
+        "dataset": "beir/scifact"
+      }
+    },
+    {
+      "step": "index",
+      "inputs": {
+        "namespace": "beir-scifact",
+        "chunking": {
+          "strategy": "recursive",
+          "chunkSize": 1000,
+          "chunkOverlap": 200
+        },
+        "embedding": {
+          "provider": "ollama",
+          "model": "all-minilm"
+        }
+      }
+    },
+    {
+      "step": "query",
+      "inputs": {
+        "retrieval": {
+          "topK": 100,
+          "minScore": 0.0
+        },
+        "reranking": {
+          "strategy": "cross-encoder",
+          "model": "ms-marco-minilm-l6",
+          "topN": 100
+        },
+        "rewriting": {
+          "strategy": "none",
+          "model": "",
+          "count": 0,
+          "instruction": ""
+        }
+      }
+    },
+    {
+      "step": "score",
+      "inputs": {
+        "aggregation": "maxp",
+        "metrics": "MTEB retrieval metrics"
+      }
+    },
+    {
+      "step": "compare",
+      "inputs": {
+        "baseline": "minilm-recursive-1000",
+        "test": "paired-randomization"
+      }
+    },
+    {
+      "step": "record",
+      "inputs": {}
+    }
+  ],
+  "pipeline": {
+    "harness": "rag-eval 0.1.0",
+    "git_sha": "ed7f1fb",
+    "run_name": "minilm-1000+ce-msmarco-minilm",
+    "hardware": {
+      "os": "Windows",
+      "machine": "AMD64",
+      "cpus": 12,
+      "python": "3.13.5"
+    },
+    "python": {
+      "version": "3.13.5",
+      "implementation": "CPython",
+      "uv_lock_sha256": "7cfd0bd8a4fdbd4faad07e28b290fc4c8c3d37db86e21c608025b67f34f302e9",
+      "packages": {
+        "annotated-doc": "0.0.6",
+        "annotated-types": "0.8.0",
+        "anyio": "4.16.0",
+        "cachetools": "7.3.0",
+        "certifi": "2026.10.23",
+        "cffi": "2.1.1",
+        "charset-normalizer": "3.5.2",
+        "click": "8.5.1",
+        "cloudpickle": "3.1.2",
+        "colorama": "0.4.6",
+        "cryptography": "50.0.2",
+        "databricks-sdk": "0.166.0",
+        "fastapi": "0.162.5",
+        "filelock": "4.2.10",
+        "fsspec": "2026.9.0",
+        "gitdb": "4.0.12",
+        "gitpython": "3.2.1",
+        "google-auth": "2.62.2",
+        "h11": "0.16.0",
+        "hf-xet": "1.8.0",
+        "httpcore": "1.0.9",
+        "httpcore2": "2.16.0",
+        "httpx": "0.28.1",
+        "httpx2": "2.16.0",
+        "huggingface-hub": "2.4.0",
+        "idna": "3.20",
+        "importlib-metadata": "10.2.0",
+        "iniconfig": "2.3.1",
+        "ir-measures": "0.4.3",
+        "lazy-importer": "0.1.0",
+        "mlflow-skinny": "3.18.0",
+        "numpy": "2.4.6",
+        "opentelemetry-api": "1.45.2",
+        "opentelemetry-proto": "1.45.2",
+        "opentelemetry-sdk": "1.45.2",
+        "opentelemetry-semantic-conventions": "0.66b2",
+        "packaging": "26.3",
+        "phonenumbers": "9.0.43",
+        "pluggy": "1.7.0",
+        "protobuf": "7.36.2",
+        "pyarrow": "26.0.1",
+        "pyasn1": "0.6.5",
+        "pyasn1-modules": "0.4.2",
+        "pycparser": "3.12",
+        "pydantic": "2.14.3",
+        "pydantic-core": "2.50.4",
+        "pygments": "2.21.0",
+        "pytest": "9.2.0",
+        "python-dotenv": "1.2.4",
+        "python-multipart": "0.0.33",
+        "pytrec-eval-terrier": "0.5.11",
+        "pyyaml": "6.0.3",
+        "rag-eval": "0.1.0",
+        "requests": "2.34.2",
+        "scipy": "1.18.1",
+        "smmap": "5.0.3",
+        "sqlparse": "0.6.1",
+        "starlette": "1.10.0",
+        "tqdm": "4.70.1",
+        "truststore": "0.10.5",
+        "typing-extensions": "4.16.0",
+        "typing-inspection": "0.4.5",
+        "urllib3": "2.8.0",
+        "uvicorn": "0.54.0",
+        "zipp": "4.1.2"
+      }
+    },
+    "app": {
+      "name": "basic-rag-project",
+      "version": "0.0.1-SNAPSHOT",
+      "build_time": "2026-11-24T02:37:17.587Z",
+      "commit": "ed7f1fb",
+      "branch": "develop",
+      "sbom": null,
+      "libraries": null
+    }
+  }
+}

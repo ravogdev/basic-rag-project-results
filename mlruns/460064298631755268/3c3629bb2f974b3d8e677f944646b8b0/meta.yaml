@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/460064298631755268/3c3629bb2f974b3d8e677f944646b8b0/artifacts
+end_time: 1795505438787
+entry_point_name: ''
+experiment_id: '460064298631755268'
+lifecycle_stage: active
+run_id: 3c3629bb2f974b3d8e677f944646b8b0
+run_name: minilm-1000-top20+llm-qwen0.5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795505136886
+status: 3
+tags: []
+user_id: unknown

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/460064298631755268/a0fd752c74074e6dbfa5d995fa229965/artifacts
+end_time: 1795505915418
+entry_point_name: ''
+experiment_id: '460064298631755268'
+lifecycle_stage: active
+run_id: a0fd752c74074e6dbfa5d995fa229965
+run_name: minilm-1000+ce-bge-base
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795505517311
+status: 3
+tags: []
+user_id: unknown

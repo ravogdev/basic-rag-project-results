@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/129742146910640398/1dcb14abdc1d41fcb6878fbc22c24a45/artifacts
+end_time: 1795506802189
+entry_point_name: ''
+experiment_id: '129742146910640398'
+lifecycle_stage: active
+run_id: 1dcb14abdc1d41fcb6878fbc22c24a45
+run_name: nfcorpus-minilm-1000+ce-msmarco-minilm-top10
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795506789972
+status: 3
+tags: []
+user_id: unknown

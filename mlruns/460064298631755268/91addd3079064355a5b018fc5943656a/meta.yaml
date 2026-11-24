@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/basic-rag-project/basic-rag-project/store/mlruns/460064298631755268/91addd3079064355a5b018fc5943656a/artifacts
+end_time: 1795493171417
+entry_point_name: ''
+experiment_id: '460064298631755268'
+lifecycle_stage: active
+run_id: 91addd3079064355a5b018fc5943656a
+run_name: minilm-1000+ce-msmarco-minilm-top50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795493154111
+status: 3
+tags: []
+user_id: unknown
